@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".VinNumberActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <!--<com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_input_vin_no"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter VIN Number"
+            app:endIconDrawable="@drawable/noun_scan"
+            app:endIconMode="custom"
+            app:endIconTint="@color/grey_dark"
+            app:errorIconDrawable="@null"
+            android:layout_margin="15dp"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                android:inputType="textFilter|textNoSuggestions|textCapCharacters"
+                android:maxLength="25"
+                android:maxLines="1"
+                android:focusable="true"
+                android:singleLine="true"
+                android:textAllCaps="true">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_boder_teal"
+            android:layout_margin="10dp">
+        <EditText
+            android:id="@+id/et_vin_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+            android:focusable="true"
+            android:backgroundTint="@color/colorLiteGreen"
+            android:hint="Enter VIN Number"
+            android:inputType="textFilter|textNoSuggestions|textCapCharacters"
+            android:maxLength="25"
+            android:maxLines="1"
+            android:text=""
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textAllCaps="true"
+            android:visibility="visible"
+            android:layout_toLeftOf="@+id/image_scan"/>
+
+            <ImageView
+                android:id="@+id/image_scan"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/noun_scan"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:tint="@color/grey"/>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/btn_proceed"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:text="Proceed"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:textAllCaps="false"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:padding="10dp"
+            android:text="VIN Number"
+            android:textColor="@color/colorBlack"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_data"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

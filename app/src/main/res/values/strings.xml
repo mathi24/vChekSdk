@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">vChekSdk</string>
+    <string name="txt_need_permissions">Need Permissions</string>
+    <string name="txt_app_settings_permissions">This app needs permission to use this feature. You can grant them in app settings.</string>
+    <string name="txt_goto_settings">GOTO SETTINGS</string>
+    <string name="txt_cancel">Cancel</string>
+
+
+    <string name="refresh">Refresh</string>
+    <string name="key_activity_json">meta_data</string>
+    <string name="key_vin_no">vin_number</string>
+    <string name="key_vin_need">vin_need</string>
+    <string name="key_vin_max_length">max_length</string>
+    <string name="configure">Fetching model details.</string>
+    <string name="error_msg_network_problem">Please check your network connection</string>
+    <string name="error_msg_gps_problem">Please check your GPS enabled</string>
+    <string name="error_msg_not_downloaded">Model download failed </string>
+    <string name="error_msg_crash">An unexpected error occured.Sorry for the inconvenience.</string>
+
+    <string name="openFolder">Open Downloaded Folder</string>
+    <string name="downloadStarted">Download Started…</string>
+    <string name="downloadCompleted">Download Completed…</string>
+    <string name="downloadFailed">Download Failed…</string>
+    <string name="downloadAgain">Download Again</string>
+
+    <string name="tfe_ic_model" translatable="false">Model:</string>
+    <string-array name="tfe_ic_models" translatable="false">
+        <item>Quantized_EfficientNet</item>
+        <item>Float_EfficientNet</item>
+        <item>Quantized_MobileNet</item>
+        <item>Float_MobileNet</item>
+    </string-array>
+
+    <string name="tfe_ic_device" translatable="false">Device:</string>
+    <string-array name="tfe_ic_devices" translatable="false">
+        <item>CPU</item>
+        <item>GPU</item>
+        <item>NNAPI</item>
+    </string-array>
+
+    <string name="scan_bar_code">Bar Code/QR Code</string>
+    <string name="scan_bar_code2">Bar Code</string>
+    <string name="scan_qr_code">QR Code</string>
+    <string name="scan_ocr">OCR</string>
+
+    <string name="tfe_ic_camera_error" translation_description="Error regarding camera support[CHAR_LIMIT=40]">This device doesn\'t support Camera2 API.</string>
+    <string name="tfe_ic_gpu_quant_error" translation_description="Error regarding GPU support for Quant models[CHAR_LIMIT=60]">GPU does not yet supported quantized models.</string>
+    <string name="ok">OK</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
+    <string name="title_activity_main">Barcode Reader Sample</string>
+    <string name="barcode_header">Click &quot;Read Barcode&quot; to read a barcode</string>
+    <string name="read_barcode">Read Barcode</string>
+    <string name="auto_focus">Auto Focus</string>
+    <string name="use_flash">Use Flash</string>
+    <string name="barcode_success">Barcode read successfully</string>
+    <string name="barcode_failure">No barcode captured</string>
+    <string name="barcode_error">"Error reading barcode: %1$s"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

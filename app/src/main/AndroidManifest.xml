@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.v_chek_host.vcheckhostsdk">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+   <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE"/>-->
+    <!--<uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />-->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:largeHeap="true"
+        android:theme="@style/Theme.VCheckHostSdk"
+        android:icon="@mipmap/ic_launcher"
+         android:roundIcon="@mipmap/ic_launcher_round">
+        <activity android:name=".ml.VinCompareResultActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".ml.VinCompareCaptureActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".ocrscanner.OcrCaptureActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".barcodescanner.BarcodeCaptureActivity"
+            android:screenOrientation="portrait">
+           <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity android:name=".ui.StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ModelCheckActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:host="www.deeplinkvchek.com"
+                    android:pathPrefix="/model"
+                    android:scheme="vchek"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.VchekErrorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VinNumberActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.VinCompareActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name=".ui.ScanVinNumberActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".ui.ClassifierActivity"
+            android:screenOrientation="landscape"
+            android:exported="true"/>
+        <activity
+            android:name=".ui.DetectorActivity"
+            android:screenOrientation="landscape"
+            android:exported="true"/>
+
+       <!-- <service android:name=".service.ModelDownloadService">
+            <intent-filter>
+                <action android:name="net.vChek.MyService" />
+            </intent-filter>
+        </service>-->
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+
+</manifest>
